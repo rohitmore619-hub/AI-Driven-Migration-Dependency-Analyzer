@@ -1,0 +1,21 @@
+{
+  "databases": [
+    {
+      "database": "OracleFinanceDB",
+      "version": "11g",
+      "used_by": [
+        "FinanceApp",
+        "ReportingApp"
+      ],
+      "compatibility": "Upgrade Required"
+    },
+    {
+      "database": "CustomerDB",
+      "version": "MySQL 5.6",
+      "used_by": [
+        "BillingApp"
+      ],
+      "compatibility": "Compatible"
+    }
+  ]
+}

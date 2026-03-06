@@ -1,0 +1,14 @@
+{
+  "legacy_systems": [
+    {
+      "application": "FinanceApp",
+      "legacy_component": "COM+",
+      "risk": "Unsupported in containerized migration"
+    },
+    {
+      "application": "ReportingApp",
+      "legacy_component": "Crystal Reports DLL",
+      "risk": "Driver dependency missing"
+    }
+  ]
+}

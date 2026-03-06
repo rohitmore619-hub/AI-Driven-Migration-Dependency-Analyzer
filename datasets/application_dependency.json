@@ -1,0 +1,32 @@
+{
+  "applications": [
+    {
+      "application": "FinanceApp",
+      "depends_on": [
+        "AuthService",
+        "RedisCache",
+        "OracleFinanceDB",
+        "ReportEngine"
+      ]
+    },
+    {
+      "application": "BillingApp",
+      "depends_on": [
+        "CustomerDB",
+        "AuthService"
+      ]
+    },
+    {
+      "application": "ReportingApp",
+      "depends_on": [
+        "OracleFinanceDB"
+      ]
+    },
+    {
+      "application": "CitrixAccessGateway",
+      "depends_on": [
+        "AuthService"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+    "scores": [
+        {
+            "application": "FinanceApp",
+            "score": 120
+        },
+        {
+            "application": "BillingApp",
+            "score": 80
+        },
+        {
+            "application": "ReportingApp",
+            "score": 20
+        },
+        {
+            "application": "CitrixAccessGateway",
+            "score": 20
+        }
+    ]
+}

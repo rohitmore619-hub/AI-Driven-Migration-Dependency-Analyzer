@@ -1,0 +1,20 @@
+{
+    "decisions": [
+        {
+            "application": "FinanceApp",
+            "decision": "HOLD"
+        },
+        {
+            "application": "BillingApp",
+            "decision": "CONDITIONAL"
+        },
+        {
+            "application": "ReportingApp",
+            "decision": "READY"
+        },
+        {
+            "application": "CitrixAccessGateway",
+            "decision": "READY"
+        }
+    ]
+}

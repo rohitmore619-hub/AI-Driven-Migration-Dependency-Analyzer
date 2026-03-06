@@ -1,0 +1,24 @@
+{
+  "network_rules": [
+    {
+      "source": "FinanceApp",
+      "target": "OracleFinanceDB",
+      "port": 1521,
+      "status": "Blocked",
+      "issue": "Firewall missing Azure subnet allow rule"
+    },
+    {
+      "source": "BillingApp",
+      "target": "CustomerDB",
+      "port": 3306,
+      "status": "Allowed"
+    },
+    {
+      "source": "ReportingApp",
+      "target": "OracleFinanceDB",
+      "port": 1521,
+      "status": "Blocked",
+      "issue": "Legacy network ACL"
+    }
+  ]
+}

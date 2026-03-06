@@ -1,0 +1,44 @@
+{
+  "servers": [
+    {
+      "hostname": "fin-app-01",
+      "os": "Windows Server 2012",
+      "cpu": 8,
+      "memory_gb": 32,
+      "application": "FinanceApp",
+      "criticality": "High",
+      "wave": "Wave-3",
+      "target_cloud": "Azure"
+    },
+    {
+      "hostname": "fin-app-02",
+      "os": "Windows Server 2012",
+      "cpu": 8,
+      "memory_gb": 32,
+      "application": "BillingApp",
+      "criticality": "Medium",
+      "wave": "Wave-2",
+      "target_cloud": "Azure"
+    },
+    {
+      "hostname": "report-app-01",
+      "os": "Windows Server 2016",
+      "cpu": 4,
+      "memory_gb": 16,
+      "application": "ReportingApp",
+      "criticality": "Medium",
+      "wave": "Wave-2",
+      "target_cloud": "Azure"
+    },
+    {
+      "hostname": "ctx-gateway-01",
+      "os": "Windows Server 2019",
+      "cpu": 4,
+      "memory_gb": 8,
+      "application": "CitrixAccessGateway",
+      "criticality": "Low",
+      "wave": "Wave-1",
+      "target_cloud": "Azure"
+    }
+  ]
+}

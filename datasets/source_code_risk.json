@@ -1,0 +1,19 @@
+{
+  "source_code_findings": [
+    {
+      "application": "FinanceApp",
+      "issue": "Hardcoded Oracle connection string",
+      "severity": "Critical"
+    },
+    {
+      "application": "BillingApp",
+      "issue": "Static IP dependency",
+      "severity": "High"
+    },
+    {
+      "application": "ReportingApp",
+      "issue": "Deprecated JDBC driver",
+      "severity": "High"
+    }
+  ]
+}

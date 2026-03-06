@@ -1,0 +1,14 @@
+{
+  "runtime": [
+    {
+      "application": "FinanceApp",
+      "runtime": ".NET Framework 3.5",
+      "risk": "Requires upgrade before Azure App Service"
+    },
+    {
+      "application": "BillingApp",
+      "runtime": "Java 6",
+      "risk": "Unsupported in managed Kubernetes"
+    }
+  ]
+}

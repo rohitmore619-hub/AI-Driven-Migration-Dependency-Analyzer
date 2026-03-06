@@ -1,0 +1,21 @@
+{
+  "authentication": [
+    {
+      "application": "FinanceApp",
+      "auth_type": "LDAP",
+      "dependency": "LegacyAD",
+      "risk": "LDAP protocol unsupported in cloud"
+    },
+    {
+      "application": "BillingApp",
+      "auth_type": "Kerberos",
+      "dependency": "OnPrem-KDC",
+      "risk": "Kerberos cross-region latency"
+    },
+    {
+      "application": "AuthService",
+      "auth_type": "OIDC",
+      "dependency": "IdentityProvider"
+    }
+  ]
+}
