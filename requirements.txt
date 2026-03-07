@@ -5,3 +5,8 @@ networkx
 openpyxl
 scikit-learn
 jupyter
+streamlit
+ibm-watsonx-ai
+matplotlib
+pandas
+python-dotenv
