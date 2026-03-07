@@ -3,7 +3,7 @@ import json
 import os
 import matplotlib.pyplot as plt
 from ibm_watsonx_ai.foundation_models import Model
-API_KEY = "v8BXoDB_S7lQw6shF4kO0n7C3lcpbGfukeSigbDPG-N3"
+API_KEY = "QjOtaSsKXO4Qi_PDCHIspEmF0vWg-asZpsce8pGyNfdz"
 PROJECT_ID = "f942fa84-855c-4ffe-8084-57598f06cd7d"
 URL = "https://us-south.ml.cloud.ibm.com"
 credentials = {
