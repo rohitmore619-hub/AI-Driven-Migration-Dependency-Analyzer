@@ -122,6 +122,25 @@ for idx, rec in enumerate(recommendations["recommendations"]):
         left_y = y - 0.015
     else:
         right_y = y - 0.015
+# AI Migration Narrative (Granite-driven)
 
+with open(os.path.join(DATASET_DIR, "granite_summary.json")) as f:
+    granite = json.load(f)
+
+summary_text = granite["summary"]
+
+plt.figtext(0.52, 0.08, "AI Migration Narrative", fontsize=10, fontweight="bold")
+
+plt.figtext(
+    0.52,
+    0.04,
+    summary_text,
+    fontsize=8,
+    color="black",
+    wrap=True
+)
+
+plt.axis("off")
+plt.show()
 plt.axis("off")
 plt.show()
