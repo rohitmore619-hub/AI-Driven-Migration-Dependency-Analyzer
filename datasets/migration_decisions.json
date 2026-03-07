@@ -15,6 +15,10 @@
         {
             "application": "CitrixAccessGateway",
             "decision": "READY"
+        },
+        {
+            "application": "HRPortal",
+            "decision": "READY"
         }
     ]
 }

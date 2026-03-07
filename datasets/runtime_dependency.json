@@ -1,14 +1,19 @@
 {
-  "runtime": [
+  "runtime_dependencies": [
     {
       "application": "FinanceApp",
       "runtime": ".NET Framework 3.5",
-      "risk": "Requires upgrade before Azure App Service"
+      "risk": "Upgrade required"
     },
     {
       "application": "BillingApp",
       "runtime": "Java 6",
-      "risk": "Unsupported in managed Kubernetes"
+      "risk": "Unsupported runtime"
+    },
+    {
+      "application": "ReportingApp",
+      "runtime": ".NET Framework 4.5",
+      "risk": "Partial compatibility"
     }
   ]
 }

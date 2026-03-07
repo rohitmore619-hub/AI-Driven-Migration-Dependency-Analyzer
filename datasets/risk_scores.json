@@ -2,19 +2,23 @@
     "scores": [
         {
             "application": "FinanceApp",
-            "score": 120
+            "score": 100
         },
         {
             "application": "BillingApp",
-            "score": 80
+            "score": 90
         },
         {
             "application": "ReportingApp",
-            "score": 20
+            "score": 65
         },
         {
             "application": "CitrixAccessGateway",
-            "score": 20
+            "score": 55
+        },
+        {
+            "application": "HRPortal",
+            "score": 60
         }
     ]
 }

@@ -11,34 +11,34 @@
       "target_cloud": "Azure"
     },
     {
-      "hostname": "fin-app-02",
-      "os": "Windows Server 2012",
-      "cpu": 8,
-      "memory_gb": 32,
+      "hostname": "bill-app-01",
+      "os": "RHEL 7",
+      "cpu": 4,
+      "memory_gb": 16,
       "application": "BillingApp",
       "criticality": "Medium",
       "wave": "Wave-2",
-      "target_cloud": "Azure"
+      "target_cloud": "IBM Cloud"
     },
     {
-      "hostname": "report-app-01",
+      "hostname": "report-01",
       "os": "Windows Server 2016",
       "cpu": 4,
       "memory_gb": 16,
       "application": "ReportingApp",
-      "criticality": "Medium",
-      "wave": "Wave-2",
-      "target_cloud": "Azure"
-    },
-    {
-      "hostname": "ctx-gateway-01",
-      "os": "Windows Server 2019",
-      "cpu": 4,
-      "memory_gb": 8,
-      "application": "CitrixAccessGateway",
       "criticality": "Low",
       "wave": "Wave-1",
       "target_cloud": "Azure"
+    },
+    {
+      "hostname": "hr-portal-01",
+      "os": "Ubuntu 22",
+      "cpu": 4,
+      "memory_gb": 8,
+      "application": "HRPortal",
+      "criticality": "Medium",
+      "wave": "Wave-1",
+      "target_cloud": "IBM Cloud"
     }
   ]
 }

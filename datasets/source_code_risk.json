@@ -1,5 +1,5 @@
 {
-  "source_code_findings": [
+  "source_code_risks": [
     {
       "application": "FinanceApp",
       "issue": "Hardcoded Oracle connection string",
@@ -12,8 +12,13 @@
     },
     {
       "application": "ReportingApp",
-      "issue": "Deprecated JDBC driver",
-      "severity": "High"
+      "issue": "Deprecated DLL reference",
+      "severity": "Medium"
+    },
+    {
+      "application": "CitrixAccessGateway",
+      "issue": "Legacy authentication callback",
+      "severity": "Medium"
     }
   ]
 }

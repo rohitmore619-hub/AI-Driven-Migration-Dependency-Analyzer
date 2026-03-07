@@ -1,5 +1,5 @@
 {
-    "recommendations": [
+    "dependencies": [
         {
             "application": "FinanceApp",
             "dependencies": [
@@ -8,12 +8,6 @@
                 "OracleFinanceDB",
                 "ReportEngine",
                 "SAPGateway"
-            ],
-            "recommendations": [
-                "Validate authentication integration",
-                "Validate database connectivity",
-                "Validate cache failover strategy",
-                "Upgrade runtime from legacy runtime"
             ]
         },
         {
@@ -23,11 +17,6 @@
                 "AuthService",
                 "KafkaBroker",
                 "PaymentAPI"
-            ],
-            "recommendations": [
-                "Validate authentication integration",
-                "Validate database connectivity",
-                "Upgrade runtime from legacy runtime"
             ]
         },
         {
@@ -36,10 +25,6 @@
                 "OracleFinanceDB",
                 "ReportEngine",
                 "BlobStorage"
-            ],
-            "recommendations": [
-                "Validate database connectivity",
-                "Upgrade runtime from legacy runtime"
             ]
         },
         {
@@ -48,10 +33,6 @@
                 "AuthService",
                 "LDAPProxy",
                 "FirewallGateway"
-            ],
-            "recommendations": [
-                "Validate authentication integration",
-                "Upgrade runtime from legacy runtime"
             ]
         },
         {
@@ -60,9 +41,6 @@
                 "PostgresHRDB",
                 "SSOService",
                 "DocumentService"
-            ],
-            "recommendations": [
-                "Upgrade runtime from legacy runtime"
             ]
         }
     ]

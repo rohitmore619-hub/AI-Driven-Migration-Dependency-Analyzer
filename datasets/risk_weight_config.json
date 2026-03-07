@@ -1,0 +1,7 @@
+{
+  "dependency_weight": 10,
+  "database_weight": 15,
+  "authentication_weight": 15,
+  "runtime_weight": 10,
+  "source_code_weight": 10
+}

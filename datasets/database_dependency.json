@@ -1,21 +1,28 @@
 {
-  "databases": [
+  "database_dependencies": [
     {
+      "application": "FinanceApp",
       "database": "OracleFinanceDB",
-      "version": "11g",
-      "used_by": [
-        "FinanceApp",
-        "ReportingApp"
-      ],
-      "compatibility": "Upgrade Required"
+      "engine": "Oracle 11g",
+      "hosting": "OnPrem"
     },
     {
+      "application": "BillingApp",
       "database": "CustomerDB",
-      "version": "MySQL 5.6",
-      "used_by": [
-        "BillingApp"
-      ],
-      "compatibility": "Compatible"
+      "engine": "MySQL 5.7",
+      "hosting": "VMware"
+    },
+    {
+      "application": "ReportingApp",
+      "database": "OracleFinanceDB",
+      "engine": "Oracle 11g",
+      "hosting": "Shared"
+    },
+    {
+      "application": "HRPortal",
+      "database": "PostgresHRDB",
+      "engine": "PostgreSQL 11",
+      "hosting": "Linux VM"
     }
   ]
 }

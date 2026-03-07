@@ -2,30 +2,45 @@
   "applications": [
     {
       "application": "FinanceApp",
-      "depends_on": [
+      "dependencies": [
         "AuthService",
         "RedisCache",
         "OracleFinanceDB",
-        "ReportEngine"
+        "ReportEngine",
+        "SAPGateway"
       ]
     },
     {
       "application": "BillingApp",
-      "depends_on": [
+      "dependencies": [
         "CustomerDB",
-        "AuthService"
+        "AuthService",
+        "KafkaBroker",
+        "PaymentAPI"
       ]
     },
     {
       "application": "ReportingApp",
-      "depends_on": [
-        "OracleFinanceDB"
+      "dependencies": [
+        "OracleFinanceDB",
+        "ReportEngine",
+        "BlobStorage"
       ]
     },
     {
       "application": "CitrixAccessGateway",
-      "depends_on": [
-        "AuthService"
+      "dependencies": [
+        "AuthService",
+        "LDAPProxy",
+        "FirewallGateway"
+      ]
+    },
+    {
+      "application": "HRPortal",
+      "dependencies": [
+        "PostgresHRDB",
+        "SSOService",
+        "DocumentService"
       ]
     }
   ]

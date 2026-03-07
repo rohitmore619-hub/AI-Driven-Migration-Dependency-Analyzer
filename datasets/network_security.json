@@ -4,8 +4,7 @@
       "source": "FinanceApp",
       "target": "OracleFinanceDB",
       "port": 1521,
-      "status": "Blocked",
-      "issue": "Firewall missing Azure subnet allow rule"
+      "status": "Blocked"
     },
     {
       "source": "BillingApp",
@@ -14,11 +13,10 @@
       "status": "Allowed"
     },
     {
-      "source": "ReportingApp",
-      "target": "OracleFinanceDB",
-      "port": 1521,
-      "status": "Blocked",
-      "issue": "Legacy network ACL"
+      "source": "CitrixAccessGateway",
+      "target": "LDAPProxy",
+      "port": 389,
+      "status": "Blocked"
     }
   ]
 }

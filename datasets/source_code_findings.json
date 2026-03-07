@@ -1,0 +1,29 @@
+{
+  "applications": [
+    {
+      "application": "FinanceApp",
+      "findings": [
+        {
+          "name": "Hardcoded Secret",
+          "cvss": 7.2,
+          "cwe": 798
+        },
+        {
+          "name": "Weak Encryption",
+          "cvss": 5.8,
+          "cwe": 327
+        }
+      ]
+    },
+    {
+      "application": "BillingApp",
+      "findings": [
+        {
+          "name": "Static Token",
+          "cvss": 6.4,
+          "cwe": 256
+        }
+      ]
+    }
+  ]
+}

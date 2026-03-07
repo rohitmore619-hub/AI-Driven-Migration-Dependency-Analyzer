@@ -1,94 +1,53 @@
 import json
 import os
 
-# Base path setup
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASET_DIR = os.path.join(BASE_DIR, "datasets")
 
-# Files
-app_file = os.path.join(DATASET_DIR, "application_dependency.json")
-db_file = os.path.join(DATASET_DIR, "database_dependency.json")
-auth_file = os.path.join(DATASET_DIR, "authentication_dependency.json")
-runtime_file = os.path.join(DATASET_DIR, "runtime_dependency.json")
-source_file = os.path.join(DATASET_DIR, "source_code_risk.json")
-network_file = os.path.join(DATASET_DIR, "network_security.json")
-legacy_file = os.path.join(DATASET_DIR, "legacy_compatibility_risk.json")
+def load_json(filename):
+    with open(os.path.join(DATASET_DIR, filename)) as f:
+        return json.load(f)
 
-risk_file = os.path.join(DATASET_DIR, "risk_scores.json")
+app_dep = load_json("application_dependency.json")
+db_dep = load_json("database_dependency.json")
+auth_dep = load_json("authentication_dependency.json")
+runtime_dep = load_json("runtime_dependency.json")
+code_dep = load_json("source_code_risk.json")
+weights = load_json("risk_weight_config.json")
 
-# Load JSONs
-with open(app_file) as f:
-    app_data = json.load(f)
+scores = []
 
-with open(db_file) as f:
-    db_data = json.load(f)
+for app in app_dep["applications"]:
 
-with open(auth_file) as f:
-    auth_data = json.load(f)
-
-with open(runtime_file) as f:
-    runtime_data = json.load(f)
-
-with open(source_file) as f:
-    source_data = json.load(f)
-
-with open(network_file) as f:
-    network_data = json.load(f)
-
-with open(legacy_file) as f:
-    legacy_data = json.load(f)
-
-# Dynamic key resolver
-def get_app_name(item):
-    return item.get("application") or item.get("app") or item.get("name") or item.get("service")
-
-scores_output = []
-
-for app in app_data["applications"]:
-
-    app_name = get_app_name(app)
+    app_name = app["application"]
     score = 0
 
-    # 1. Application dependencies
-    score += len(app.get("depends_on", [])) * 20
+    dependencies = app.get("dependencies", [])
 
-    # 2. Database dependency
-    for db in db_data.get("databases", []):
-        if get_app_name(db) == app_name:
-            score += 25
+    score += len(dependencies) * weights["dependency_weight"]
 
-    # 3. Authentication dependency
-    for auth in auth_data.get("authentication", []):
-        if get_app_name(auth) == app_name:
-            score += 20
+    for db in db_dep["database_dependencies"]:
+        if db["application"] == app_name:
+            score += weights["database_weight"]
 
-    # 4. Runtime dependency
-    for runtime in runtime_data.get("runtime", []):
-        if get_app_name(runtime) == app_name:
-            score += 20
+    for auth in auth_dep["authentication_dependencies"]:
+        if auth["application"] == app_name:
+            score += weights["authentication_weight"]
 
-    # 5. Source code risk
-    for src in source_data.get("source_code", []):
-        if get_app_name(src) == app_name:
-            score += 15
+    for runtime in runtime_dep["runtime_dependencies"]:
+        if runtime["application"] == app_name:
+            score += weights["runtime_weight"]
 
-    # 6. Network security dependency
-    for net in network_data.get("network", []):
-        if get_app_name(net) == app_name:
-            score += 15
+    for code in code_dep["source_code_risks"]:
+        if code["application"] == app_name:
+            score += weights["source_code_weight"]
 
-    # 7. Legacy risk
-    for legacy in legacy_data.get("legacy", []):
-        if get_app_name(legacy) == app_name:
-            score += 20
-
-    scores_output.append({
+    scores.append({
         "application": app_name,
         "score": score
     })
 
-# Save output
-with open(risk_file, "w") as f:
-    json.dump({"scores": scores_output}, f, indent=4)
+with open(os.path.join(DATASET_DIR, "risk_scores.json"), "w") as f:
+    json.dump({"scores": scores}, f, indent=4)
 
-print("\nrisk_scores.json generated successfully.")
+print("risk_scores.json generated successfully.")

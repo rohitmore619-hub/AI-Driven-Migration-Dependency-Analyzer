@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "component": "Json.NET",
+      "version": "10.0.3",
+      "critical": 1,
+      "high": 1,
+      "medium": 0,
+      "low": 0
+    },
+    {
+      "component": "log4net",
+      "version": "2.0.8",
+      "critical": 0,
+      "high": 2,
+      "medium": 1,
+      "low": 0
+    }
+  ]
+}

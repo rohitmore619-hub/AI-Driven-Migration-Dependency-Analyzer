@@ -1,21 +1,28 @@
 {
-  "authentication": [
+  "authentication_dependencies": [
     {
       "application": "FinanceApp",
       "auth_type": "LDAP",
       "dependency": "LegacyAD",
-      "risk": "LDAP protocol unsupported in cloud"
+      "risk": "Unsupported LDAP in cloud"
     },
     {
       "application": "BillingApp",
       "auth_type": "Kerberos",
       "dependency": "OnPrem-KDC",
-      "risk": "Kerberos cross-region latency"
+      "risk": "Kerberos relay dependency"
     },
     {
-      "application": "AuthService",
-      "auth_type": "OIDC",
-      "dependency": "IdentityProvider"
+      "application": "CitrixAccessGateway",
+      "auth_type": "LDAP",
+      "dependency": "LegacyAD",
+      "risk": "Firewall traversal issue"
+    },
+    {
+      "application": "HRPortal",
+      "auth_type": "SSO",
+      "dependency": "AzureAD",
+      "risk": "Minimal"
     }
   ]
 }
