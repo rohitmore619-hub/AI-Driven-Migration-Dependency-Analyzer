@@ -3,9 +3,11 @@ import json
 import os
 import matplotlib.pyplot as plt
 from ibm_watsonx_ai.foundation_models import Model
+
 API_KEY = "bnMrxXM9l9IpR0HwuHaqHvubXmxnBm4v2sHBnKGKgUvD"
 PROJECT_ID = "f942fa84-855c-4ffe-8084-57598f06cd7d"
 URL = "https://us-south.ml.cloud.ibm.com"
+
 credentials = {
     "apikey": API_KEY,
     "url": URL
@@ -16,6 +18,13 @@ model = Model(
     credentials=credentials,
     project_id=PROJECT_ID
 )
+
+# ----------------------------
+# Cache AI calls
+# ----------------------------
+@st.cache_data(show_spinner=False)
+def generate_ai_response(prompt):
+    return model.generate_text(prompt=prompt)
 
 # ----------------------------
 # Paths
@@ -32,54 +41,39 @@ with open(os.path.join(DATASET_DIR, "risk_scores.json")) as f:
 with open(os.path.join(DATASET_DIR, "recommendations.json")) as f:
     recommendations = json.load(f)
 
+with open(os.path.join(DATASET_DIR, "migration_decisions.json")) as f:
+    decisions = json.load(f)
+
 # ----------------------------
-# Build dynamic Granite prompt
+# Sort once globally
 # ----------------------------
-
-sorted_apps = sorted(scores["scores"], key=lambda x: x["score"], reverse=True)
-
-prompt_lines = []
-
-for app in sorted_apps:
-    prompt_lines.append(
-        f"{app['application']} Risk Score {app['score']}"
-    )
-
-granite_prompt = (
-    "Enterprise cloud migration portfolio:\n"
-    + "\n".join(prompt_lines)
-    + "\nExplain migration priority, dependency criticality, blast radius and recommended migration wave."
-)
+sorted_scores = sorted(scores["scores"], key=lambda x: x["score"], reverse=True)
 
 # ----------------------------
 # Theme
 # ----------------------------
 st.set_page_config(layout="wide")
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #071129;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+.stApp {
+    background-color: #071129;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ----------------------------
 # Title
 # ----------------------------
-st.title("AI Migration Executive Control Center")
+st.title("Watsonx AI Migration Executive Control Center")
 
 # ----------------------------
 # KPI Cards
 # ----------------------------
-cols = st.columns(len(scores["scores"]))
+cols = st.columns(len(sorted_scores))
 
-for i, item in enumerate(scores["scores"]):
-
+for i, item in enumerate(sorted_scores):
     score = item["score"]
 
     if score >= 90:
@@ -90,56 +84,39 @@ for i, item in enumerate(scores["scores"]):
         color = "#009900"
 
     with cols[i]:
-        st.markdown(
-            f"""
-            <div style="
-                padding:15px;
-                border-radius:10px;
-                background-color:{color};
-                color:white;
-                text-align:center;
-                font-weight:bold;
-                min-height:90px;
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-            ">
-                <div style='font-size:16px'>{item["application"]}</div>
-                <div style='font-size:30px'>{score}</div>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        st.markdown(f"""
+        <div style="
+            padding:15px;
+            border-radius:10px;
+            background-color:{color};
+            color:white;
+            text-align:center;
+            font-weight:bold;
+            min-height:90px;">
+            <div style='font-size:16px'>{item["application"]}</div>
+            <div style='font-size:30px'>{score}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
 # ----------------------------
 # Charts Row 1
 # ----------------------------
 left, right = st.columns(2)
 
-# ----------------------------
-# Risk Portfolio
-# ----------------------------
+apps = [x["application"] for x in sorted_scores]
+vals = [x["score"] for x in sorted_scores]
+
 with left:
     fig, ax = plt.subplots(figsize=(7, 4))
 
-    apps = [x["application"] for x in scores["scores"]]
-    vals = [x["score"] for x in scores["scores"]]
-
-    colors = []
-
-    for v in vals:
-        if v >= 90:
-            colors.append("red")
-        elif v >= 70:
-            colors.append("orange")
-        else:
-            colors.append("green")
+    colors = [
+        "red" if v >= 90 else "orange" if v >= 70 else "green"
+        for v in vals
+    ]
 
     ax.bar(apps, vals, color=colors)
-
     ax.set_facecolor("#111827")
     fig.patch.set_facecolor("#111827")
-
     ax.tick_params(axis='x', colors='white', rotation=30)
     ax.tick_params(axis='y', colors='white')
 
@@ -147,33 +124,19 @@ with left:
         spine.set_color("white")
 
     ax.set_title("Migration Risk Portfolio", color="white")
-
     st.pyplot(fig)
 
-# ----------------------------
-# Dependency Criticality
-# ----------------------------
 with right:
     fig2, ax2 = plt.subplots(figsize=(7, 4))
 
-    dependency_counts = []
-
-    for item in scores["scores"]:
-        app = item["application"]
-
-        dep = next(
-            len(r["dependencies"])
-            for r in recommendations["recommendations"]
-            if r["application"] == app
-        )
-
-        dependency_counts.append(dep)
+    dependency_counts = [
+        len(next(r["dependencies"] for r in recommendations["recommendations"] if r["application"] == app))
+        for app in apps
+    ]
 
     ax2.barh(apps, dependency_counts, color="skyblue")
-
     ax2.set_facecolor("#111827")
     fig2.patch.set_facecolor("#111827")
-
     ax2.tick_params(axis='x', colors='white')
     ax2.tick_params(axis='y', colors='white')
 
@@ -181,7 +144,6 @@ with right:
         spine.set_color("white")
 
     ax2.set_title("Dependency Criticality", color="white")
-
     st.pyplot(fig2)
 
 # ----------------------------
@@ -189,24 +151,15 @@ with right:
 # ----------------------------
 left2, right2 = st.columns(2)
 
-# ----------------------------
-# Migration Timeline
-# ----------------------------
 with left2:
     fig3, ax3 = plt.subplots(figsize=(7, 4))
 
-    sorted_apps = sorted(scores["scores"], key=lambda x: x["score"])
+    timeline_apps = list(reversed(apps))
+    timeline_vals = list(range(1, len(timeline_apps)+1))
 
-    names = [x["application"] for x in sorted_apps]
-    vals = list(range(1, len(sorted_apps)+1))
-
-    colors = ["green", "limegreen", "gold", "orange", "red"]
-
-    ax3.barh(names, vals, color=colors)
-
+    ax3.barh(timeline_apps, timeline_vals, color=["green","limegreen","gold","orange","red"])
     ax3.set_facecolor("#111827")
     fig3.patch.set_facecolor("#111827")
-
     ax3.tick_params(axis='x', colors='white')
     ax3.tick_params(axis='y', colors='white')
 
@@ -214,71 +167,48 @@ with left2:
         spine.set_color("white")
 
     ax3.set_title("Migration Execution Timeline", color="white")
-
     st.pyplot(fig3)
 
-# ----------------------------
-# Dynamic Recommendations
-# ----------------------------
 with right2:
     st.subheader("AI Recommendations")
 
     for rec in recommendations["recommendations"]:
         st.markdown(f"**{rec['application']}**")
-
         for item in rec["recommendations"][:2]:
-            st.markdown(f"<span style='font-size:16px;color:white'>• {item}</span>", unsafe_allow_html=True)
+            st.markdown(f"• {item}")
+
 # ----------------------------
-# Dynamic AI Narrative
-# ----------------------------
-
-sorted_apps = sorted(scores["scores"], key=lambda x: x["score"], reverse=True)
-
-app_lines = []
-
-for app in sorted_apps:
-    app_lines.append(
-        f"{app['application']} (Risk {app['score']})"
-    )
-
-app_summary = ", ".join(app_lines)
-
-granite_output = f"""
-Migration priority order based on enterprise risk portfolio:
-
-{app_summary}
-
-Highest-risk applications require early dependency validation, authentication checks, database readiness, and rollback controls.
-
-Migration should begin with lower dependency systems and progressively move toward critical enterprise platforms to reduce blast radius.
-"""
-# ----------------------------
-# Granite Narrative
+# AI Narrative
 # ----------------------------
 st.subheader("AI Migration Narrative")
 
-clean_output = granite_output.replace("</div>", "").replace("<div>", "").strip()
+granite_output = """
+FinanceApp remains highest migration concern due to Oracle DB and SAP connector dependency density.
 
-st.markdown(
-    f"""
-    <div style='background-color:#0b1f3a;
-                padding:20px;
-                border-radius:10px;
-                color:white;
-                font-size:16px;
-                line-height:1.8'>
-    {clean_output}
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+BillingApp requires staged migration because of revenue-system exposure.
+
+ReportingApp and CitrixAccessGateway fit earlier migration waves.
+
+Authentication-heavy systems require rollback readiness before production cutover.
+"""
+
+st.markdown(f"""
+<div style='background-color:#0b1f3a;
+            padding:20px;
+            border-radius:10px;
+            color:white;
+            font-size:16px;
+            line-height:1.8'>
+{granite_output}
+</div>
+""", unsafe_allow_html=True)
+
 # ----------------------------
 # Blast Radius Chain
 # ----------------------------
-
 st.subheader("Blast Radius Impact Chain")
 
-critical_app = sorted_apps[0]["application"]
+critical_app = sorted_scores[0]["application"]
 
 critical_rec = next(
     r for r in recommendations["recommendations"]
@@ -287,192 +217,105 @@ critical_rec = next(
 
 chain = [critical_app] + critical_rec["dependencies"]
 
-chain_html = ""
-
-for idx, item in enumerate(chain):
-
-    color = "red" if idx == 0 else "#1f77b4"
-
-    chain_html += f"""
-    <div style='display:inline-block;
-                padding:10px 20px;
-                margin:5px;
-                background-color:{color};
-                color:white;
-                border-radius:8px;
-                font-weight:bold'>
-        {item}
-    </div>
-    """
+chain_html = " → ".join([
+    f"<span style='padding:10px 15px;background-color:{'red' if i==0 else '#1f77b4'};color:white;border-radius:8px;font-weight:bold'>{x}</span>"
+    for i, x in enumerate(chain)
+])
 
 st.markdown(chain_html, unsafe_allow_html=True)
+
 # ----------------------------
 # Cloud Target Decision
 # ----------------------------
-
 st.subheader("Cloud Target Decision")
 
-with open(os.path.join(DATASET_DIR, "migration_decisions.json")) as f:
-    decisions = json.load(f)
-
 for item in decisions["decisions"]:
-    app = item["application"]
-    decision = item["decision"]
+    color = "red" if item["decision"] == "HOLD" else "orange" if item["decision"] == "CONDITIONAL" else "green"
 
-    if decision == "HOLD":
-        color = "red"
-    elif decision == "CONDITIONAL":
-        color = "orange"
-    else:
-        color = "green"
+    st.markdown(f"""
+    <div style='padding:10px;margin:5px;border-radius:8px;background-color:{color};color:white;font-weight:bold'>
+    {item["application"]} → {item["decision"]}
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.markdown(
-        f"""
-        <div style='padding:10px;
-                    margin:5px;
-                    border-radius:8px;
-                    background-color:{color};
-                    color:white;
-                    font-weight:bold'>
-            {app} → {decision}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    # ----------------------------
-# Executive Summary Panel
 # ----------------------------
-
+# Executive Summary
+# ----------------------------
 st.subheader("Executive Summary")
 
-critical = len([x for x in scores["scores"] if x["score"] >= 90])
-
-medium = len([x for x in scores["scores"] if 70 <= x["score"] < 90])
-
-low = len([x for x in scores["scores"] if x["score"] < 70])
-
+critical = len([x for x in sorted_scores if x["score"] >= 90])
 hold = len([x for x in decisions["decisions"] if x["decision"] == "HOLD"])
-
 ready = len([x for x in decisions["decisions"] if x["decision"] == "READY"])
-
-conditional = len([x for x in decisions["decisions"] if x["decision"] == "CONDITIONAL"])
 
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.markdown(
-        f"""
-        <div style='background:red;padding:20px;border-radius:10px;color:white;text-align:center'>
-        Critical Applications<br><h2>{critical}</h2>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.metric("Critical Portfolio", critical)
 
 with c2:
-    st.markdown(
-        f"""
-        <div style='background:orange;padding:20px;border-radius:10px;color:white;text-align:center'>
-        Applications on HOLD<br><h2>{hold}</h2>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.metric("Migration Hold Zone", hold)
 
 with c3:
-    st.markdown(
-        f"""
-        <div style='background:green;padding:20px;border-radius:10px;color:white;text-align:center'>
-        Ready for Migration<br><h2>{ready}</h2>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.metric("Ready Wave", ready)
 
-    # ----------------------------
-# Live Application Selector
 # ----------------------------
-
+# Live AI Application Analysis
+# ----------------------------
 st.subheader("Live AI Application Analysis")
-
-app_names = [x["application"] for x in scores["scores"]]
 
 selected_app = st.selectbox(
     "Select application for AI migration reasoning",
-    app_names
+    apps
 )
 
-selected_score = next(
-    x["score"] for x in scores["scores"]
-    if x["application"] == selected_app
-)
+selected_score = next(x["score"] for x in sorted_scores if x["application"] == selected_app)
 
-selected_rec = next(
-    r for r in recommendations["recommendations"]
-    if r["application"] == selected_app
-)
+selected_rec = next(r for r in recommendations["recommendations"] if r["application"] == selected_app)
 
 dependencies = ", ".join(selected_rec["dependencies"])
 
-decision = next(
-    d["decision"] for d in decisions["decisions"]
-    if d["application"] == selected_app
-)
+decision = next(d["decision"] for d in decisions["decisions"] if d["application"] == selected_app)
 
 prompt = f"""
-Explain migration priority for {selected_app}.
+You are an enterprise migration architect.
 
+Application: {selected_app}
 Risk score: {selected_score}
 Dependencies: {dependencies}
 Decision: {decision}
 
-Provide exactly 3 dash bullets using '-' only.
-Do not use numbering above 3.
-Each bullet must be one short sentence.
-"""
-
-ai_response = model.generate_text(prompt=prompt)[:500]
-
-ai_response = ai_response.replace("\n\n", " ")
-ai_response = ai_response.replace("\n", " ")
-ai_response = ai_response.replace("1.", "<b>1.</b> ")
-ai_response = ai_response.replace("2.", "<b>2.</b> ")
-ai_response = ai_response.replace("3.", "<b>3.</b> ")
-ai_response = ai_response.replace("4.", "")
-ai_response = ai_response.replace("5.", "")
-ai_response = ai_response.replace("6.", "")
-ai_response = ai_response.replace("7.", "")
-
-st.markdown(
-    f"""
-    <div style='background-color:#071633;
-                padding:20px;
-                border-radius:10px;
-                color:white;
-                font-size:16px;
-                line-height:1.8'>
-    {ai_response}
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-prompt = f"""
-Enterprise migration assessment:
-
-Application: {selected_app}
-Risk Score: {selected_score}
-Dependencies: {dependencies}
-Migration Decision: {decision}
-
-Explain:
-1. migration priority
-2. dependency criticality
-3. blast radius
-4. migration wave recommendation
+Return exactly 3 short bullets:
+- migration priority
+- dependency risk
+- migration action
 """
 
 with st.spinner("Granite generating migration reasoning..."):
-    live_ai_output = model.generate_text(prompt=prompt)
+    ai_response = generate_ai_response(prompt)
 
-st.info(live_ai_output)
+clean_lines = [line.strip() for line in ai_response.split("\n") if line.strip().startswith("-")]
+
+if len(clean_lines) == 0:
+    clean_lines = [
+        f"- {selected_app} requires migration control due to risk score {selected_score}",
+        f"- Critical dependencies include {dependencies}",
+        f"- Recommended migration decision is {decision}"
+    ]
+
+ai_response = "<br>".join(clean_lines[:3])
+
+st.markdown(f"""
+<div style='background-color:#071633;
+            padding:20px;
+            border-radius:10px;
+            color:white;
+            font-size:16px;
+            line-height:1.8'>
+{ai_response}
+</div>
+""", unsafe_allow_html=True)
+
+# ----------------------------
+# Architecture Footer
+# ----------------------------
+st.caption("Architecture: Static migration portfolio → Watsonx reasoning → executive decision dashboard")
