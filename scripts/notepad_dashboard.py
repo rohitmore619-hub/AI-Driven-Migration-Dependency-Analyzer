@@ -142,5 +142,3 @@ plt.figtext(
 
 plt.axis("off")
 plt.show()
-plt.axis("off")
-plt.show()
