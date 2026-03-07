@@ -122,22 +122,45 @@ for idx, rec in enumerate(recommendations["recommendations"]):
         left_y = y - 0.015
     else:
         right_y = y - 0.015
-# AI Migration Narrative (Granite-driven)
+# AI Migration Narrative (Fully Dynamic)
 
 with open(os.path.join(DATASET_DIR, "granite_summary.json")) as f:
     granite = json.load(f)
 
 summary_text = granite["summary"]
 
-plt.figtext(0.52, 0.08, "AI Migration Narrative", fontsize=10, fontweight="bold")
+# Dynamic wrapping logic
+words = summary_text.split()
+lines = []
+line = ""
+
+for word in words:
+    if len(line + word) < 45:
+        line += word + " "
+    else:
+        lines.append(line)
+        line = word + " "
+
+lines.append(line)
+
+wrapped_summary = "\n".join(lines)
 
 plt.figtext(
-    0.52,
-    0.04,
-    summary_text,
+    0.58,
+    0.17,
+    "AI Migration Narrative",
+    fontsize=10,
+    fontweight="bold",
+    color="white"
+)
+
+plt.figtext(
+    0.58,
+    0.10,
+    wrapped_summary,
     fontsize=8,
-    color="black",
-    wrap=True
+    color="white",
+    linespacing=1.6
 )
 
 plt.axis("off")
