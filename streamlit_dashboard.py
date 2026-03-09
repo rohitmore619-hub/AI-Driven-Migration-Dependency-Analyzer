@@ -4,9 +4,9 @@ import os
 import matplotlib.pyplot as plt
 from ibm_watsonx_ai.foundation_models import Model
 
-API_KEY = "bnMrxXM9l9IpR0HwuHaqHvubXmxnBm4v2sHBnKGKgUvD"
-PROJECT_ID = "f942fa84-855c-4ffe-8084-57598f06cd7d"
-URL = "https://us-south.ml.cloud.ibm.com"
+API_KEY = st.secrets["API_KEY"]
+PROJECT_ID = st.secrets["PROJECT_ID"]
+URL = st.secrets["URL"]
 
 credentials = {
     "apikey": API_KEY,
