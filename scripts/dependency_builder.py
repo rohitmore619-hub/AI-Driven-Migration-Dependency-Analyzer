@@ -1,22 +1,27 @@
-import json
 import os
+import json
+import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATASET_DIR = os.path.join(BASE_DIR, "datasets")
+SOURCE_DIR = os.path.join(BASE_DIR, "sample_code")
 
-def load_json(filename):
-    with open(os.path.join(DATASET_DIR, filename)) as f:
-        return json.load(f)
+dependencies = []
 
-infra = load_json("infra_inventory.json")
-app_dep = load_json("application_dependency.json")
+for root, dirs, files in os.walk(SOURCE_DIR):
+    for file in files:
+        if file.endswith(".cs") or file.endswith(".py"):
 
-output = []
+            full_path = os.path.join(root, file)
 
-for app in app_dep["applications"]:
-    output.append(app)
+            with open(full_path, "r", encoding="utf-8") as f:
+                content = f.read()
 
-with open(os.path.join(DATASET_DIR, "dependency_output.json"), "w") as f:
-    json.dump({"dependencies": output}, f, indent=4)
+            imports = re.findall(r'import\s+(\w+)', content)
 
-print("dependency_output.json generated successfully.")
+            dependencies.append({
+                "file": file,
+                "dependencies": imports
+            })
+
+with open(os.path.join(BASE_DIR, "datasets", "dependency_output.json"), "w") as f:
+    json.dump({"dependencies": dependencies}, f, indent=4)

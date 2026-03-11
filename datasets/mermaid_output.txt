@@ -1,0 +1,19 @@
+flowchart TB
+FinanceApp --> AuthService
+FinanceApp --> RedisCache
+FinanceApp --> OracleFinanceDB
+FinanceApp --> ReportEngine
+FinanceApp --> SAPGateway
+BillingApp --> CustomerDB
+BillingApp --> AuthService
+BillingApp --> KafkaBroker
+BillingApp --> PaymentAPI
+ReportingApp --> OracleFinanceDB
+ReportingApp --> ReportEngine
+ReportingApp --> BlobStorage
+CitrixAccessGateway --> AuthService
+CitrixAccessGateway --> LDAPProxy
+CitrixAccessGateway --> FirewallGateway
+HRPortal --> PostgresHRDB
+HRPortal --> SSOService
+HRPortal --> DocumentService
