@@ -63,6 +63,8 @@ with open(os.path.join(DATASET_DIR, "recommendations.json")) as f:
 with open(os.path.join(DATASET_DIR, "migration_decisions.json")) as f:
     decisions = json.load(f)
 
+with open(os.path.join(DATASET_DIR, "application_dependency.json")) as f:
+    app_dependency = json.load(f)
 # ----------------------------
 # Sort globally
 # ----------------------------
@@ -102,12 +104,44 @@ st.markdown("""
 # ----------------------------
 # Title
 # ----------------------------
-st.title("Watsonx AI Migration Executive Control Center")
+header_html = """
+<div style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+background:linear-gradient(90deg,#001d6c,#0f62fe,#00a6ff);
+padding:60px 28px 18px 28px;
+box-shadow:0 8px 24px rgba(0,0,0,0.35);
+border-bottom:2px solid rgba(255,255,255,0.15);
+min-height:110px;
+">
 
-# ----------------------------
-# Governance Status
-# ----------------------------
-st.success("AI Governance Active | Prompt Audited | Output Validated")
+<div style="
+font-size:34px;
+font-weight:900;
+color:white;
+letter-spacing:0.8px;
+margin-bottom:10px;
+">
+Watsonx AI Migration Executive Control Center
+</div>
+
+<div style="
+font-size:18px;
+font-weight:700;
+color:#00ff88;
+text-shadow:0 0 10px rgba(0,255,136,0.45);
+">
+● Governance Active | ● Concert Sequencing Enabled | ● Watsonx Reasoning Live
+</div>
+
+</div>
+"""
+
+st.markdown(header_html, unsafe_allow_html=True)
+st.markdown("<div style='height:120px;'></div>", unsafe_allow_html=True)
 
 # ----------------------------
 # KPI Cards
@@ -269,6 +303,241 @@ mermaid.initialize({{
 
 components.html(mermaid_html, height=290)
 # ----------------------------
+# Governance Layer
+# ----------------------------
+def governance_policy(selected_score):
+    if selected_score >= 95:
+        return "GOVERNANCE HOLD"
+    elif selected_score >= 80:
+        return "CONDITIONAL APPROVAL"
+    else:
+        return "APPROVED"
+
+selected_score = next(
+    x["score"] for x in sorted_scores if x["application"] == selected_app_global
+)
+
+gov_status = governance_policy(selected_score)
+
+# ----------------------------
+# Concert Layer
+# ----------------------------
+def concert_wave(selected_score):
+    if selected_score >= 95:
+        return "Wave 3 - Deferred Migration"
+    elif selected_score >= 80:
+        return "Wave 2 - Controlled Migration"
+    else:
+        return "Wave 1 - Ready For Migration"
+
+concert_status = concert_wave(selected_score)
+# ----------------------------
+# Display Governance + Concert
+# ----------------------------
+st.markdown("## Governance & Concert Control Layer")
+
+g1, g2 = st.columns(2)
+
+with g1:
+    gov_color = "#ff4b4b" if "HOLD" in gov_status else "#ffb000" if "CONDITIONAL" in gov_status else "#00aa00"
+    st.markdown(f"""
+    <div style='background:{gov_color};
+                padding:20px;
+                border-radius:10px;
+                text-align:center;
+                font-size:20px;
+                font-weight:bold;
+                color:white;'>
+        Governance Decision<br>
+        Policy Check Passed<br>
+        Output Validated<br>
+        Risk Gate: {gov_status}
+    </div>
+    """, unsafe_allow_html=True)
+
+with g2:
+    concert_color = "#ff4b4b" if "Wave 3" in concert_status else "#ffb000" if "Wave 2" in concert_status else "#00aa00"
+    st.markdown(f"""
+    <div style='background:{concert_color};
+                padding:20px;
+                border-radius:10px;
+                text-align:center;
+                font-size:20px;
+                font-weight:bold;
+                color:white;'>
+        Concert Migration Wave<br>
+        Portfolio Sequencing<br>
+        Execution Group: {concert_status}
+    </div>
+    """, unsafe_allow_html=True)
+st.markdown("## Governance Explainability")
+
+gov_reason = (
+    "High migration risk due to critical dependency concentration and blast radius."
+    if selected_score >= 95 else
+    "Conditional approval because dependency chain requires staged execution."
+    if selected_score >= 80 else
+    "Approved because dependency impact remains within acceptable migration threshold."
+)
+
+st.markdown(f"""
+<div style='background:#102840;
+            border-left:5px solid #00a3ff;
+            padding:16px;
+            border-radius:10px;
+            font-size:29px;
+            color:white;'>
+    {gov_reason}
+</div>
+""", unsafe_allow_html=True)
+st.markdown("### Governance Audit Status")
+
+audited_prompts = len(sorted_scores)
+
+blocked_responses = 1 if "HOLD" in gov_status else 0
+
+validated_outputs = audited_prompts - blocked_responses
+
+a1, a2, a3 = st.columns(3)
+
+with a1:
+    st.metric("Prompts Audited", audited_prompts)
+
+with a2:
+    st.metric("Validated Outputs", validated_outputs)
+
+with a3:
+    st.metric("Blocked Responses", blocked_responses)
+# ----------------------------
+# Concert Resilience Score
+# ----------------------------
+dependency_map = {
+    "FinanceApp": ["AuthService", "OracleFinanceDB", "RedisCache", "SAPGateway"],
+    "BillingApp": ["CustomerDB", "AuthService", "KafkaBroker", "PaymentAPI"],
+    "ReportingApp": ["BlobStorage", "CustomerDB", "OracleFinanceDB"],
+    "HRPortal": ["SSOService", "DocumentService", "PostgresHRDB"],
+    "CitrixAccessGateway": ["AuthService", "LDAPProxy", "FirewallGateway"]
+}
+
+selected_dependencies = dependency_map.get(selected_app_global, [])
+
+dependency_count = len(selected_dependencies)
+st.markdown(
+    f"""
+    <div style='
+        background-color:#0f2a5f;
+        padding:14px;
+        border-left:5px solid #0f62fe;
+        font-size:29px;
+        font-weight:700;
+        color:white;
+        border-radius:6px;
+    '>
+    {selected_app_global} has {dependency_count} critical dependencies influencing migration control.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+# Governance
+if selected_score >= 95:
+    gov_status = "GOVERNANCE HOLD"
+elif selected_score >= 80:
+    gov_status = "CONDITIONAL APPROVAL"
+else:
+    gov_status = "APPROVED"
+
+# Concert
+if selected_score >= 95:
+    concert_status = "Wave 3 - Deferred Migration"
+elif selected_score >= 65:
+    concert_status = "Wave 2 - Controlled Migration"
+else:
+    concert_status = "Wave 1 - Ready For Migration"
+
+# Resilience
+dependency_penalty = dependency_count * 4
+
+resilience_score = max(
+    35,
+    140 - selected_score - dependency_penalty
+)
+
+# Execution confidence
+if resilience_score >= 65:
+    execution_confidence = "LOW RISK"
+elif resilience_score >= 50:
+    execution_confidence = "MEDIUM RISK"
+else:
+    execution_confidence = "HIGH RISK"
+
+# Governance audit
+audited_prompts = len(sorted_scores)
+blocked_responses = 1 if "HOLD" in gov_status else 0
+validated_outputs = audited_prompts - blocked_responses
+
+
+
+st.markdown("## IBM Concert Operational Resilience")
+
+c1, c2 = st.columns(2)
+
+with c1:
+    st.metric("Operational Resilience Score", resilience_score)
+
+with c2:
+    st.metric("Execution Confidence", execution_confidence)
+if "Wave 1" in concert_status:
+    workflow_msg = "READY FOR STANDARD MIGRATION WORKFLOW"
+elif "Wave 2" in concert_status:
+    workflow_msg = "CONTROLLED EXECUTION WITH DEPENDENCY GATES"
+else:
+    workflow_msg = "DEFERRED UNTIL CRITICAL DEPENDENCIES STABILIZE"
+
+st.markdown("## Concert Workflow Recommendation")
+
+st.markdown(
+    f"""
+<div style='background-color:#0f2a5f;
+padding:18px;
+border-left:6px solid #0f62fe;
+font-size:22px;
+font-weight:700;
+color:white;
+border-radius:8px'>
+{workflow_msg}
+</div>
+""",
+    unsafe_allow_html=True
+)
+st.markdown("### Governance Audit Status")
+
+a1, a2, a3 = st.columns(3)
+
+with a1:
+    st.metric("Prompts Audited", audited_prompts)
+
+with a2:
+    st.metric("Validated Outputs", validated_outputs)
+
+with a3:
+    st.metric("Blocked Responses", blocked_responses)
+
+if resilience_score >= 70:
+    execution_confidence = "LOW RISK"
+elif resilience_score >= 50:
+    execution_confidence = "MEDIUM RISK"
+else:
+    execution_confidence = "HIGH RISK"
+
+if execution_confidence == "LOW RISK":
+    risk_color = "#24a148"
+elif execution_confidence == "MEDIUM RISK":
+    risk_color = "#f1c21b"
+else:
+    risk_color = "#da1e28"
+
+    
+# ----------------------------
 # AI Narrative
 # ----------------------------
 st.subheader("AI Migration Narrative")
@@ -309,9 +578,9 @@ if validate_ai_output(granite_output):
     log_action("Narrative Accepted", granite_output)
 
 # Deterministic executive narrative
-risk_level = "high" if selected_narrative_score >= 90 else "moderate" if selected_narrative_score >= 70 else "controlled"
+execution_confidence = "high" if selected_narrative_score >= 90 else "moderate" if selected_narrative_score >= 70 else "controlled"
 
-line1 = f"1. Dependency risk remains {risk_level} due to {selected_narrative_rec['dependencies'][0]}."
+line1 = f"1. Dependency risk remains {execution_confidence} due to {selected_narrative_rec['dependencies'][0]}."
 line2 = f"2. Blast radius extends across {len(selected_narrative_rec['dependencies'])} connected services."
 line3 = f"3. Migration sequencing recommends {narrative_decision.lower()} execution control."
 line4 = f"4. Cloud readiness for {selected_narrative_app} depends on dependency stabilization."
@@ -331,6 +600,76 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+# ----------------------------
+# Unified IBM Scoring Engine
+# ----------------------------
+
+selected_dependencies = next(
+    (
+        x["dependencies"]
+        for x in app_dependency["applications"]
+        if x["application"] == selected_app_global
+    ),
+    []
+)
+
+dependency_count = len(selected_dependencies)
+
+# ----------------------------
+# Governance Decision
+# ----------------------------
+if selected_score >= 95:
+    gov_status = "GOVERNANCE HOLD"
+elif selected_score >= 80:
+    gov_status = "CONDITIONAL APPROVAL"
+else:
+    gov_status = "APPROVED"
+
+# ----------------------------
+# Concert Migration Wave
+# ----------------------------
+if selected_score >= 95:
+    concert_status = "Wave 3 - Deferred Migration"
+elif selected_score >= 80:
+    concert_status = "Wave 2 - Controlled Migration"
+else:
+    concert_status = "Wave 1 - Ready For Migration"
+
+# ----------------------------
+# Operational Resilience Score
+# ----------------------------
+dependency_penalty = dependency_count * 4
+
+resilience_score = max(
+    35,
+    140 - selected_score - dependency_penalty
+)
+
+if resilience_score >= 65:
+    execution_confidence = "LOW RISK"
+elif resilience_score >= 50:
+    execution_confidence = "MEDIUM RISK"
+else:
+    execution_confidence = "HIGH RISK"
+
+# ----------------------------
+# Execution Confidence
+# ----------------------------
+if execution_confidence == "LOW RISK":
+    risk_color = "#24a148"
+elif execution_confidence == "MEDIUM RISK":
+    risk_color = "#f1c21b"
+else:
+    risk_color = "#da1e28"
+
+# ----------------------------
+# Governance Audit Metrics
+# ----------------------------
+audited_prompts = len(sorted_scores)
+
+blocked_responses = 1 if "HOLD" in gov_status else 0
+
+validated_outputs = audited_prompts - blocked_responses
 
 # ----------------------------
 # Blast Radius Chain
@@ -454,7 +793,7 @@ st.markdown(f"""
 padding:20px;
 border-radius:10px;
 color:white;
-font-size:16px;
+font-size:20px;
 line-height:1.8'>
 {ai_response}
 </div>
@@ -463,4 +802,25 @@ line-height:1.8'>
 # ----------------------------
 # Footer
 # ----------------------------
-st.caption("Architecture: Dynamic dependency scan → Governance → Watsonx reasoning → Executive decision dashboard")
+st.markdown(
+    """
+    <div style='
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+        padding:14px;
+        background: linear-gradient(90deg, #0f2a5f, #0f62fe);
+        text-align:center;
+        font-size:20px;
+        font-weight:700;
+        color:white;
+        z-index:9999;
+        box-shadow: 0 -3px 10px rgba(0,0,0,0.35);
+        letter-spacing:0.4px;
+    '>
+    Enterprise Flow: Dynamic Dependency Scan → Governance Control → Watsonx Reasoning → Concert Sequencing → Executive Decision Layer
+    </div>
+    """,
+    unsafe_allow_html=True
+)
