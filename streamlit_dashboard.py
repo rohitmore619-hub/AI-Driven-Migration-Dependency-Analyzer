@@ -559,14 +559,33 @@ narrative_decision = next(
     d["decision"] for d in decisions["decisions"]
     if d["application"] == selected_narrative_app
 )
-
+risk_level = (
+    "HIGH"
+    if selected_narrative_score >= 90
+    else "MEDIUM"
+    if selected_narrative_score >= 75
+    else "LOW"
+)
 narrative_prompt = f"""
+You are an enterprise migration architect preparing an executive migration review.
+
+Evaluate the following application:
+
 Application: {selected_narrative_app}
 Risk Score: {selected_narrative_score}
 Dependencies: {narrative_dependencies}
-Decision: {narrative_decision}
+Migration Decision: {narrative_decision}
+Governance Status: {gov_status}
+Concert Wave: {concert_status}
+Operational Resilience Score: {resilience_score}
+Execution Confidence: {risk_level}
 
-Provide executive migration reasoning.
+Instructions:
+1. Explain migration readiness clearly.
+2. Mention dependency impact.
+3. Explain governance implication.
+4. Explain why concert assigned this wave.
+5. Give executive recommendation in concise enterprise language.
 """
 
 log_action("Narrative Prompt Submitted", narrative_prompt)
