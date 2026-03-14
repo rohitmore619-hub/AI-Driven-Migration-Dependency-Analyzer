@@ -798,5 +798,1245 @@
         "timestamp": "2026-03-11T13:49:12.429457",
         "stage": "Live AI Response Accepted",
         "details": "\n1. Migration Priority: Hold the migration of FinanceApp due to its critical role in financial transactions"
+    },
+    {
+        "timestamp": "2026-03-11T15:07:13.216599",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:07:13.970800",
+        "stage": "Narrative Accepted",
+        "details": "\nThe proposed migration of the FinanceApp application to the Gold environment is being held due to the application"
+    },
+    {
+        "timestamp": "2026-03-11T15:07:13.998087",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:07:14.648349",
+        "stage": "Live AI Response Accepted",
+        "details": "\nmigration priority:\n- The application FinanceApp has a risk score of 100,"
+    },
+    {
+        "timestamp": "2026-03-11T15:21:12.956742",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:21:14.919363",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The Application FinanceApp has a high Risk Score (100), indicating"
+    },
+    {
+        "timestamp": "2026-03-11T15:21:14.940106",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:21:15.788771",
+        "stage": "Live AI Response Accepted",
+        "details": "\nYour answer will adhere to the following guidelines:\n- Be concise.\n- Provide Migration"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:23.981119",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:25.081751",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive migration reasoning for this decision to HOLD the Application: FinanceApp is based"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:25.106084",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:26.075648",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: HOLD status for FinanceApp indicates that the migration should be paused for the"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:51.601483",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:52.292162",
+        "stage": "Narrative Accepted",
+        "details": "\nThis application, BillingApp, is set to undergo a migration and its risk score is evaluated"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:52.312243",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:40:52.959260",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration priority: HIGH. The risk score of 90 indicates a significant risk associated with"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:22.524312",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:23.219872",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The Application, ReportingApp, has a Risk Score of 65, indicating"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:23.247090",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:24.034103",
+        "stage": "Live AI Response Accepted",
+        "details": "\nResponse:\n\n1. Migration priority: The migration priority for ReportingApp is high. Des"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:38.547009",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:38.560201",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive migration reasoning for this decision to HOLD the Application: FinanceApp is based"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:38.613481",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:38.653614",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: HOLD status for FinanceApp indicates that the migration should be paused for the"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:54.174230",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: HRPortal\nRisk Score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:54.969335",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive decision to migrate the HRPortal to readiness status is based on comprehensive risk assessment"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:54.992646",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: HRPortal\nRisk score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:41:56.192774",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Based on the limited information provided, the migration priority for HRPortal is:\n\n  - HIGH"
+    },
+    {
+        "timestamp": "2026-03-11T15:49:36.220584",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:49:36.233201",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive migration reasoning for this decision to HOLD the Application: FinanceApp is based"
+    },
+    {
+        "timestamp": "2026-03-11T15:49:36.282977",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:49:36.322344",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: HOLD status for FinanceApp indicates that the migration should be paused for the"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:01.168919",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:01.186889",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The Application, ReportingApp, has a Risk Score of 65, indicating"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:01.247864",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:01.289744",
+        "stage": "Live AI Response Accepted",
+        "details": "\nResponse:\n\n1. Migration priority: The migration priority for ReportingApp is high. Des"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:16.753470",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: HRPortal\nRisk Score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:16.766095",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive decision to migrate the HRPortal to readiness status is based on comprehensive risk assessment"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:16.814721",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: HRPortal\nRisk score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:16.850499",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Based on the limited information provided, the migration priority for HRPortal is:\n\n  - HIGH"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:48.348343",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:48.361966",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The Application, ReportingApp, has a Risk Score of 65, indicating"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:48.411569",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:50:48.445391",
+        "stage": "Live AI Response Accepted",
+        "details": "\nResponse:\n\n1. Migration priority: The migration priority for ReportingApp is high. Des"
+    },
+    {
+        "timestamp": "2026-03-11T15:57:03.572433",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:57:03.586800",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive migration reasoning for this decision to HOLD the Application: FinanceApp is based"
+    },
+    {
+        "timestamp": "2026-03-11T15:57:03.635210",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:57:03.670866",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: HOLD status for FinanceApp indicates that the migration should be paused for the"
+    },
+    {
+        "timestamp": "2026-03-11T15:59:48.932434",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:59:48.947499",
+        "stage": "Narrative Accepted",
+        "details": "\nThe executive migration reasoning for this decision to HOLD the Application: FinanceApp is based"
+    },
+    {
+        "timestamp": "2026-03-11T15:59:48.993898",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T15:59:49.031219",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: HOLD status for FinanceApp indicates that the migration should be paused for the"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:24.509158",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:24.522128",
+        "stage": "Narrative Accepted",
+        "details": "\nThis application, BillingApp, is set to undergo a migration and its risk score is evaluated"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:24.577723",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:24.609209",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration priority: HIGH. The risk score of 90 indicates a significant risk associated with"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:46.541981",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:46.580618",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The Application, ReportingApp, has a Risk Score of 65, indicating"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:46.621785",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:00:46.704041",
+        "stage": "Live AI Response Accepted",
+        "details": "\nResponse:\n\n1. Migration priority: The migration priority for ReportingApp is high. Des"
+    },
+    {
+        "timestamp": "2026-03-11T16:52:18.196292",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:52:19.047882",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T16:52:19.063237",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:52:19.668428",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T16:53:44.979788",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:53:46.785701",
+        "stage": "Narrative Accepted",
+        "details": "\nThe proposed migration of the 'ReportingApp' to version 1.2.3 is dee"
+    },
+    {
+        "timestamp": "2026-03-11T16:53:46.799670",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:53:47.461194",
+        "stage": "Live AI Response Accepted",
+        "details": "\n1. Migration Priority: With a risk score of 65, the ReportingApp is considered"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:32.165952",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:32.177186",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:32.221848",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:32.256323",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:43.788637",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:43.800024",
+        "stage": "Narrative Accepted",
+        "details": "\nThe proposed migration of the 'ReportingApp' to version 1.2.3 is dee"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:43.840292",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:56:43.875773",
+        "stage": "Live AI Response Accepted",
+        "details": "\n1. Migration Priority: With a risk score of 65, the ReportingApp is considered"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:19.825411",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:20.413954",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The high risk score (90) indicates that the migration of BillingApp may pose"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:20.426955",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:21.091642",
+        "stage": "Live AI Response Accepted",
+        "details": "\nBased on the given information, here is the assessment:\n\n- migration priority: High -"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:31.818864",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:31.830769",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:31.882899",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:31.914161",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:59.968489",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:57:59.997077",
+        "stage": "Narrative Accepted",
+        "details": "\nThe proposed migration of the 'ReportingApp' to version 1.2.3 is dee"
+    },
+    {
+        "timestamp": "2026-03-11T16:58:00.039916",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T16:58:00.078928",
+        "stage": "Live AI Response Accepted",
+        "details": "\n1. Migration Priority: With a risk score of 65, the ReportingApp is considered"
+    },
+    {
+        "timestamp": "2026-03-11T17:05:29.429065",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:05:29.442011",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:05:29.498525",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:05:29.540273",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:07:45.837036",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:07:45.848434",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The high risk score (90) indicates that the migration of BillingApp may pose"
+    },
+    {
+        "timestamp": "2026-03-11T17:07:45.901363",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:07:45.932456",
+        "stage": "Live AI Response Accepted",
+        "details": "\nBased on the given information, here is the assessment:\n\n- migration priority: High -"
+    },
+    {
+        "timestamp": "2026-03-11T17:08:06.933784",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: HRPortal\nRisk Score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:08:07.846522",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The HRPortal application has a risk score of 60, which indicates a mod"
+    },
+    {
+        "timestamp": "2026-03-11T17:08:07.861802",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: HRPortal\nRisk score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:08:08.570799",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: High\n  Considering the risk score of 60, the HRPortal"
+    },
+    {
+        "timestamp": "2026-03-11T17:19:23.313267",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:19:23.325985",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:19:23.370060",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:19:23.412087",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:21:59.528962",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:21:59.547358",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:21:59.623086",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:21:59.672794",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:22:24.202713",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: HRPortal\nRisk Score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:22:24.219413",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The HRPortal application has a risk score of 60, which indicates a mod"
+    },
+    {
+        "timestamp": "2026-03-11T17:22:24.291388",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: HRPortal\nRisk score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:22:24.358153",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority: High\n  Considering the risk score of 60, the HRPortal"
+    },
+    {
+        "timestamp": "2026-03-11T17:26:42.922442",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:26:42.941957",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:26:43.026533",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:26:43.076459",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:27:33.700701",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:27:33.719629",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:27:33.806302",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:27:33.859026",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:28:57.545248",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:28:57.586048",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:28:57.718627",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:28:57.813320",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:33:25.697273",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:33:25.710426",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:33:25.753867",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:33:25.787254",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:37:48.144038",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:37:48.164623",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:37:48.223340",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:37:48.284395",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:40:39.161634",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:40:39.173927",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:40:39.208947",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:40:39.239795",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:43:13.171045",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:43:13.180966",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:43:13.212688",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:43:13.240028",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:45:25.805632",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:45:25.821018",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:45:25.872720",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:45:25.906382",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:46:20.421838",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:46:20.438234",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:46:20.481977",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:46:20.511832",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:47:58.554487",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:47:58.571620",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:47:58.618350",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:47:58.651369",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:49:26.871981",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:49:26.902916",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The high risk score of 100 indicates that there is"
+    },
+    {
+        "timestamp": "2026-03-11T17:49:27.001044",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:49:27.068461",
+        "stage": "Live AI Response Accepted",
+        "details": "Based on the given context, here are the three bullets:\n\n1. **Migration Priority"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:00.630974",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:01.476717",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:01.493948",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:02.184402",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:28.092048",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:28.114864",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:28.185548",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:50:28.243451",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:51:52.795615",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:51:52.822929",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:51:52.907879",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:51:52.949190",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:18.895961",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:18.916558",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:18.989357",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:19.046463",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:39.336097",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:39.368706",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:39.453729",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:53:39.524341",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:54:45.212430",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:54:45.250350",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:54:45.391680",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:54:45.475692",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:55:15.440082",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:55:15.459461",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:55:15.535169",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:55:15.603377",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:56:42.665286",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:56:42.701190",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:56:42.805720",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:56:42.885149",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:34.972701",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:35.001502",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:35.102693",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:35.186116",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:55.861458",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:55.880225",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:55.929405",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:57:55.965748",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:58:45.719672",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:58:45.748841",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:58:45.784607",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:58:45.812934",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-11T17:59:10.478292",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nProvide executive migration reasoning.\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:59:10.519249",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Risk Score: The finance application has a high risk score of 10"
+    },
+    {
+        "timestamp": "2026-03-11T17:59:10.641728",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-11T17:59:10.740774",
+        "stage": "Live AI Response Accepted",
+        "details": "\nMigration Priority:\n\n- FinanceApp has a migration priority of HIGH due to its Risk"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:07.192708",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nEvaluate:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nGovernance: GOVERNANCE HOLD\nConcert: Wave 3 - Deferred Migration\nResilience Score: 35\nExecution Confidence: HIGH\n\nProvide executive migration decision summary in 5 lines.\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:08.137387",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The recommended decision for migrating FinanceApp is to HOLD, aligning with our"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:08.153774",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:08.932130",
+        "stage": "Live AI Response Accepted",
+        "details": "Migration notes:\n- The FinanceApp has a high risk score of 100, indicating"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:41.521839",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nEvaluate:\n\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nGovernance: CONDITIONAL APPROVAL\nConcert: Wave 2 - Controlled Migration\nResilience Score: 35\nExecution Confidence: HIGH\n\nProvide executive migration decision summary in 5 lines.\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:42.379069",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The application BillingApp, with a risk score of 90, has been evaluated"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:42.395219",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:43.893332",
+        "stage": "Live AI Response Accepted",
+        "details": "\n important: treat each dependency as a separate entity and evaluate them independently\n important: Base your decision"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:56.569422",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nEvaluate:\n\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nGovernance: APPROVED\nConcert: Wave 2 - Controlled Migration\nResilience Score: 63\nExecution Confidence: LOW\n\nProvide executive migration decision summary in 5 lines.\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:57.250936",
+        "stage": "Narrative Accepted",
+        "details": "\n1. The ReportingApp, with a risk score of 65, has been evaluated for"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:57.268927",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T02:45:57.825105",
+        "stage": "Live AI Response Accepted",
+        "details": "\n Migration priority is low. The risk score of 65 for ReportingApp, coupled with"
+    },
+    {
+        "timestamp": "2026-03-12T14:24:26.339431",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nMigration Decision: HOLD\nGovernance Status: GOVERNANCE HOLD\nConcert Wave: Wave 3 - Deferred Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:24:27.601097",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: The FinanceApp has a high execution confidence, indicating strong readiness"
+    },
+    {
+        "timestamp": "2026-03-12T14:24:27.625092",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:24:27.659748",
+        "stage": "Live AI Response Accepted",
+        "details": "Migration notes:\n- The FinanceApp has a high risk score of 100, indicating"
+    },
+    {
+        "timestamp": "2026-03-12T14:26:19.283087",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nMigration Decision: HOLD\nGovernance Status: GOVERNANCE HOLD\nConcert Wave: Wave 3 - Deferred Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:26:19.316688",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: The FinanceApp has a high execution confidence, indicating strong readiness"
+    },
+    {
+        "timestamp": "2026-03-12T14:26:19.373692",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:26:19.417602",
+        "stage": "Live AI Response Accepted",
+        "details": "Migration notes:\n- The FinanceApp has a high risk score of 100, indicating"
+    },
+    {
+        "timestamp": "2026-03-12T14:32:50.532747",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nMigration Decision: HOLD\nGovernance Status: GOVERNANCE HOLD\nConcert Wave: Wave 3 - Deferred Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:32:50.571391",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: The FinanceApp has a high execution confidence, indicating strong readiness"
+    },
+    {
+        "timestamp": "2026-03-12T14:32:50.633753",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:32:50.672317",
+        "stage": "Live AI Response Accepted",
+        "details": "Migration notes:\n- The FinanceApp has a high risk score of 100, indicating"
+    },
+    {
+        "timestamp": "2026-03-12T14:33:27.382001",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: BillingApp\nRisk Score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nMigration Decision: CONDITIONAL\nGovernance Status: CONDITIONAL APPROVAL\nConcert Wave: Wave 2 - Controlled Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:33:28.127174",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: BillingApp has a high execution confidence, indicating that the migration plan"
+    },
+    {
+        "timestamp": "2026-03-12T14:33:28.156630",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: BillingApp\nRisk score: 90\nDependencies: CustomerDB, AuthService, KafkaBroker, PaymentAPI\nDecision: CONDITIONAL\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:33:28.218789",
+        "stage": "Live AI Response Accepted",
+        "details": "\n important: treat each dependency as a separate entity and evaluate them independently\n important: Base your decision"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:15.451914",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nMigration Decision: HOLD\nGovernance Status: GOVERNANCE HOLD\nConcert Wave: Wave 3 - Deferred Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:15.477808",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: The FinanceApp has a high execution confidence, indicating strong readiness"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:15.567131",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:15.619276",
+        "stage": "Live AI Response Accepted",
+        "details": "Migration notes:\n- The FinanceApp has a high risk score of 100, indicating"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:42.880215",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: HRPortal\nRisk Score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nMigration Decision: READY\nGovernance Status: APPROVED\nConcert Wave: Wave 1 - Ready For Migration\nOperational Resilience Score: 68\nExecution Confidence: LOW\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:43.740481",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness: HRPortal has been deemed migration ready with a risk score of"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:43.771052",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: HRPortal\nRisk score: 60\nDependencies: PostgresHRDB, SSOService, DocumentService\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:45.459493",
+        "stage": "Live AI Response Accepted",
+        "details": "\n1. Migration Priority: The HRPortal application has a risk score of 60, which"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:52.877186",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: ReportingApp\nRisk Score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nMigration Decision: READY\nGovernance Status: APPROVED\nConcert Wave: Wave 2 - Controlled Migration\nOperational Resilience Score: 63\nExecution Confidence: LOW\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:53.576206",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration Readiness: The ReportingApp is considered READY for migration, indicating that the"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:53.624566",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: ReportingApp\nRisk score: 65\nDependencies: OracleFinanceDB, ReportEngine, BlobStorage\nDecision: READY\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-12T14:42:53.679317",
+        "stage": "Live AI Response Accepted",
+        "details": "\n Migration priority is low. The risk score of 65 for ReportingApp, coupled with"
+    },
+    {
+        "timestamp": "2026-03-14T07:53:52.705396",
+        "stage": "Narrative Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect preparing an executive migration review.\n\nEvaluate the following application:\n\nApplication: FinanceApp\nRisk Score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nMigration Decision: HOLD\nGovernance Status: GOVERNANCE HOLD\nConcert Wave: Wave 3 - Deferred Migration\nOperational Resilience Score: 35\nExecution Confidence: HIGH\n\nInstructions:\n1. Explain migration readiness clearly.\n2. Mention dependency impact.\n3. Explain governance implication.\n4. Explain why concert assigned this wave.\n5. Give executive recommendation in concise enterprise language.\n"
+    },
+    {
+        "timestamp": "2026-03-14T07:53:53.925761",
+        "stage": "Narrative Accepted",
+        "details": "\n1. Migration readiness for FinanceApp is currently unclear due to its high risk score of"
+    },
+    {
+        "timestamp": "2026-03-14T07:53:53.966444",
+        "stage": "Live Prompt Submitted",
+        "details": "\nYou are an enterprise migration architect.\n\nApplication: FinanceApp\nRisk score: 100\nDependencies: AuthService, RedisCache, OracleFinanceDB, ReportEngine, SAPGateway\nDecision: HOLD\n\nDependency Graph:\nflowchart TB\nFinanceApp --> AuthService\nFinanceApp --> RedisCache\nFinanceApp --> OracleFinanceDB\nFinanceApp --> ReportEngine\nFinanceApp --> SAPGateway\nBillingApp --> CustomerDB\nBillingApp --> AuthService\nBillingApp --> KafkaBroker\nBillingApp --> PaymentAPI\nReportingApp --> OracleFinanceDB\nReportingApp --> ReportEngine\nReportingApp --> BlobStorage\nCitrixAccessGateway --> AuthService\nCitrixAccessGateway --> LDAPProxy\nCitrixAccessGateway --> FirewallGateway\nHRPortal --> PostgresHRDB\nHRPortal --> SSOService\nHRPortal --> DocumentService\n\n\nReturn exactly 3 bullets:\n- migration priority\n- dependency risk\n- migration action\n"
+    },
+    {
+        "timestamp": "2026-03-14T07:53:54.736943",
+        "stage": "Live AI Response Accepted",
+        "details": "\n- Migration Priority:\n  The migration priority for the FinanceApp is low. This is primarily due"
     }
 ]

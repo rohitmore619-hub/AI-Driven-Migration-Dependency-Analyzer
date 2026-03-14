@@ -191,19 +191,7 @@ for i, item in enumerate(sorted_scores):
         </div>
         """, unsafe_allow_html=True)
 
-# ----------------------------
-# Global Application Selector
-# ----------------------------
-st.markdown(
-    "<div style='color:#78a9ff;font-weight:bold;font-size:18px;margin-bottom:5px;'>Select Application for Full Dashboard Analysis</div>",
-    unsafe_allow_html=True
-)
 
-selected_app_global = st.selectbox(
-    "",
-    apps,
-    key="global_app"
-)
 
 # ----------------------------
 # Charts Row 1
@@ -249,6 +237,39 @@ with right:
 
     ax2.set_title("Dependency Criticality", color="white")
     st.pyplot(fig2)
+# ----------------------------
+# Global Application Selector - Tight Premium Layout
+# ----------------------------
+left_sel, right_sel = st.columns([1.8, 5.2])
+st.markdown("""
+<style>
+div[data-baseweb="select"] > div {
+    min-height: 45px;
+    border-radius: 8px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+with left_sel:
+    st.markdown("""
+    <div style='
+        color:white;
+        font-weight:800;
+        font-size:24px;
+        margin-top:6px;
+        white-space:nowrap;
+        padding-right:5px;
+    '>
+        Select Application for Full Dashboard Analysis
+    </div>
+    """, unsafe_allow_html=True)
+
+with right_sel:
+    selected_app_global = st.selectbox(
+        "",
+        apps,
+        key="global_app",
+        label_visibility="collapsed"
+    )
 
 # ----------------------------
 # Mermaid Dependency Flow
